@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Romanization;
 
 // ReSharper disable CheckNamespace
 // ReSharper disable StringLiteralTypo
@@ -19,7 +20,7 @@ namespace RomanizationTests
 		/// <param name="context">Unused.</param>
 		[AssemblyInitialize]
 		public static void TestInit(TestContext context)
-		{
+        {
 			Console.WriteLine("Test initialization starting...");
 			CultureInfo.DefaultThreadCurrentCulture   = CultureInfo.GetCultureInfo("en-CA");
 			CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.GetCultureInfo("en-CA");

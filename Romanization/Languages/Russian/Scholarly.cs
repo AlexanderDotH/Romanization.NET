@@ -121,6 +121,20 @@ namespace Romanization
 			[Pure]
 			public string Process(string text)
 				=> Process(text, DefaultCulture);
-		}
+
+            public bool IsPartOfCulture(string text)
+            {
+                int matches = 0;
+
+                for (int i = 0; i < text.Length; i++)
+                {
+                    string element = text[i].ToString();
+                    if (this.RomanizationTable.ContainsKey(element))
+                        matches++;
+                }
+
+                return matches == text.Length;
+            }
+        }
 	}
 }

@@ -26,5 +26,7 @@ namespace Romanization
 		/// <returns>A romanized version of the text, leaving unrecognized characters untouched.</returns>
 		[Pure]
 		public string Process(string text, CultureInfo nativeCulture);
-	}
+
+        public bool IsPartOfCulture(string text);
+    }
 }
